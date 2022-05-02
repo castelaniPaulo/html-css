@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(82, 82, 194)
+}
+h1{
+    color: rgb(97, 37, 37);
+}
+h1#principal{
+    text-align: center;
+    background-color: bisque;
+}
