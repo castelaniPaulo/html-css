@@ -12,7 +12,7 @@
             padding: 0px;
         }
         body{
-			background-color: azure;
+			background-color: rgb(184, 197, 197);
             font-family: Arial, Helvetica, sans-serif;
             
         }
@@ -26,7 +26,7 @@
             margin: auto;
 			margin-top: 20px;
             border-radius: 15px;
-            box-shadow: 1px 1px 1px 4px black;
+            box-shadow: 1px 1px 1px 1px black;
         }
         header > h1{
             font-weight: bold;
@@ -40,7 +40,7 @@
             margin: 30px;
         }
         p{
-            padding: 7px;
+            padding: 8px;
             
         }
         legend{
@@ -51,18 +51,21 @@
             background-color: black;
             color: white;
             border-radius: 5px;
+
         }
-        input#btn :hover{
+        input#btn:hover{
             background-color: white;
             color: black;
             padding: 6px;
+            font-weight: bold;
+            transition: 1.2s;
         }
      
     </style>
 </head>
 <body>
     <header>
-        <h1>Bem vindo: Preencha os campos abaixo</h1>
+        <h1>Bem vindo<br> Preencha os campos abaixo</h1>
     </header>
     <main>
         <form action="cadastro.php" method="post">
@@ -103,7 +106,7 @@
                 
             </fieldset>
             <fieldset>
-                <legend>Enviar</legend>
+                
                 <p>
                     <input id="btn" type="submit" value="Enviar">
                     <input id="btn" type="reset">
