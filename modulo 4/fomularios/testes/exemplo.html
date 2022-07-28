@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Cadastro</title>
     <style>
 
 		*{
@@ -14,10 +14,10 @@
         body{
 			background-color: rgb(184, 197, 197);
             font-family: Arial, Helvetica, sans-serif;
-            
+            background-image: url(fundo-madeira.jpg);
         }
         header{
-            background-color: black;
+            background-image: linear-gradient(rgba(165, 42, 42, 0.596), to bottom ));
             color: white;
         }
         main{
@@ -58,30 +58,30 @@
             color: black;
             padding: 6px;
             font-weight: bold;
-            transition: 1.2s;
+            transition: 0.8s;
         }
      
     </style>
 </head>
 <body>
     <header>
-        <h1>Bem vindo<br> Preencha os campos abaixo</h1>
+        <h1>Bem vindo<br> Preencha os campos abaixo:</h1>
     </header>
     <main>
-        <form action="cadastro.php" method="post">
+        <form action="script.js" method="post">
 			<fieldset>
                 <legend>Dados pessoais</legend>
                 <p>
                     <label for="iNome">Nome:</label>
-                    <input type="text" name="nome" id="iNome" minlength="15" maxlength="35" required placeholder="Nome completo">
+                    <input type="text" name="nome" id="iNome" minlength="15" maxlength="35" required placeholder="Nome completo" size="32">
                 </p>
                 <p>
                     <label for="iEnd">Endereço:</label>
-                    <input type="text" name="end" id="iEnd" placeholder="avenida aguas da prata" required minlength="20" maxlength="40">
+                    <input type="text" name="end" id="iEnd" placeholder="avenida aguas da prata" required minlength="20" maxlength="40" size="35">
                 </p>
                 <p>
                     <label for="iDate">data de nascimento:</label>
-                    <input type="date" name="data" id="iDate" required >
+                    <input type="date" name="data" id="iDate" required autocomplete="date">
                 </p>
 				<p style="padding: 1px; font-weight: bold; ">Sexo:</p>
                 <p>
@@ -89,32 +89,39 @@
                     <input type="radio" name="sexo" id="rmas">
                     <label for="rmas">Masculino</label><br>
                     <input type="radio" name="sexo" id="rfem">
-                    <label for="rfem">feminino</label>
+                    <label for="rfem">Feminino</label><br>
+                    <input type="radio" name="sexo" id="routro">
+                    <label for="routro">Outro</label>
                 </p>
             </fieldset>
             <fieldset>
                 <legend>Dados cadastrais</legend>
                 <p>
                     <label  for="iEmail">Email:</label>
-                    <input type="email" name="email" id="iEmail" required placeholder="Digite seu email" minlength="10" maxlength="40">
+                    <input type="email" name="email" id="iEmail" required placeholder="Digite seu email" minlength="10" maxlength="40" autocomplete="email">
                 </p>
-
+				<p>
+                    <label for="itel">Tefefone:</label>
+                    <input type="tel" name="telefone" id="itel" required min="11" max="11" placeholder="99999999999" autocomplete="tel">
+                </p>
                     <p>
                         <label for="isenha">Senha:</label>
-                        <input type="password" name="Senha" id="isenha">
+                        <input type="password" name="Senha" id="isenha" required minlength="8" maxlength="12" placeholder="************" size="10" autocomplete="current-password">
+                        
+                    </p>
+                    <p>
+                        <label for="irepeatsenha">Repita sua senha:</label>
+                        <input type="password" name="rsenha" id="irepeatsenha" required minlength="8" maxlength="12" size="10" placeholder="************" autocomplete="current-password">
                     </p>
                 
             </fieldset>
             <fieldset>
                 
                 <p>
-                    <input id="btn" type="submit" value="Enviar">
-                    <input id="btn" type="reset">
+                    <input id="btn" type="submit" value="Enviar" onclick="clicar">
+                    <input id="btn" type="reset" onclick="resetclicar">
                 </p>
-            </fieldset>
-    		
-            
-			            
+            </fieldset>       
         </form>
     </main>
     <footer>
@@ -123,4 +130,5 @@
         
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
